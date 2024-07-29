@@ -1,1 +1,2 @@
-# fish_market_prediction
+Fish Market Prediction
+This project employs machine learning to predict fish species based on measurements such as length, height, and width. The model is built using a Random Forest classifier and deployed on Heroku for live predictions. The application provides a simple web interface where users can input the fish measurements and get the predicted species. You can access the live application here. This project demonstrates the complete pipeline from data preprocessing, model training, to deploying a machine learning model as a web service
