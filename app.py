@@ -10,6 +10,7 @@ try:
     model = joblib.load('model.pkl')
     print("Model loaded successfully")
 except Exception as e:
+    model = None
     print(f"Error loading model: {e}")
 
 @app.route('/')
@@ -19,6 +20,9 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    if model is None:
+        return "Model not loaded"
+    
     print("Handling prediction request")
     try:
         features = [float(x) for x in request.form.values()]
